@@ -52,6 +52,7 @@
 
     var defaults = {
         initial : "0 0/1 * * * ?",
+        every: 'Every',
         minuteOpts : {
             minWidth  : 100, // only applies if columns and itemWidth not set
             itemWidth : 30,
@@ -333,7 +334,7 @@
             }
 
             block["period"] = $("<span class='cron-period'>"
-                    + "Every <select name='cron-period'>" + custom_periods
+                    + o.every + " <select name='cron-period'>" + custom_periods
                     + str_opt_period + "</select> </span>")
                 .appendTo(this)
                 .data("root", this);
